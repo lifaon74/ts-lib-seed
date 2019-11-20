@@ -4,8 +4,8 @@ const $fs = require('fs').promises;
 const $path = require('path');
 
 const config = {
-  githubPage: 'lifaon74/test-lib',
-  packageName: '@lifaon/test-lib',
+  githubPage: 'your-id/test-lib',
+  packageName: '@your-id/test-lib',
   libName: 'test-lib',
   author: 'Your name',
 };
