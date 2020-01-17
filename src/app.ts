@@ -1,7 +1,9 @@
+import { helloWorld } from './core/hello-world';
+
 window.onload = () => {
-  // TODO
-  console.log('Hello world');
+  helloWorld()
 };
+
 
 
 
