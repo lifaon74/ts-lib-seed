@@ -58,6 +58,13 @@
     "serve_dev_browser": " browser-sync start --config bs-config.js",
     "clean_dev_browser": "shx rm -rf ./dist/browser",
 
+    "dev_nodejs": "npm-run-all clean_dev_nodejs watch_dev_nodejs",
+    "watch_dev_nodejs": "npm-run-all -p tcs_watch_dev_nodejs nodemon_dev_bodejs",
+    "tcs_watch_dev_nodejs": "tsc-watch -p ./tsconfig/tsconfig.dev.nodejs.json",
+    "clean_dev_nodejs": "npm run clean_dist_cjs",
+    "prenodemon_dev_bodejs": "wait-on ./dist/cjs/app.js",
+    "nodemon_dev_bodejs": "nodemon --delay 1500ms \"./dist/cjs/app.js\"",
+
     "toc": "markdown-toc README.md"
   },
   "repository": {
@@ -77,6 +84,8 @@
     "http-server": "^0.12.1",
     "markdown-toc": "^1.2.0",
     "mkdirp": "^1.0.3",
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2",
     "npm-run-all": "^4.1.5",
     "rollup": "^1.31.1",
     "rollup-plugin-alias": "^2.2.0",
@@ -88,7 +97,7 @@
     "typescript": "3.7.5",
     "typescript-tuple": "^2.2.1",
     "uglify-es": "^3.3.9",
-    "node-sass": "^4.13.1"
+    "wait-on": "^4.0.0"
   },
   "dependencies": {}
 }
