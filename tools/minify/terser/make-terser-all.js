@@ -1,3 +1,3 @@
 const makeTerser = require('./make-terser');
 
-makeTerser('dist/global/routes.umd.js');
+makeTerser('dist/global/{{lib-name}}.umd.js');

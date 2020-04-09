@@ -3,11 +3,19 @@
 const $fs = require('fs').promises;
 const $path = require('path');
 
-const config = {
+const defaultConfig = {
   githubPage: 'your-id/test-lib',
   packageName: '@your-id/test-lib',
   libName: 'test-lib',
   author: 'Your name',
+};
+
+const config = {
+  ...defaultConfig,
+  githubPage: 'lifaon74/class-factory',
+  packageName: '@lifaon/class-factory',
+  libName: 'class-factory',
+  author: 'Valentin Richard',
 };
 
 const ROOT = $path.normalize(__dirname);

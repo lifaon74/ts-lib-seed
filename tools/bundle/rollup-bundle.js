@@ -46,6 +46,7 @@ module.exports = function rollupBundle(options) {
       }),
       {
         resolveImportMeta(prop, { moduleId }) {
+          moduleId = $path.resolve(process.cwd(), moduleId);
           const destinationFolder = $path.dirname($path.resolve(process.cwd(), dest));
           const relativePath = $path.relative(destinationFolder, moduleId);
           // console.log('------------------------------');
