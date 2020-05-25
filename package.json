@@ -1,6 +1,6 @@
 {
-  "name": "test",
-  "_name": "{{package-name}}",
+  "_name": "test",
+  "name": "{{package-name}}",
   "version": "1.0.0",
   "description": "Description",
   "main": "index.js",
