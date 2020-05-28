@@ -56,7 +56,7 @@
     "bundle_dev_browser": "node tools/bundle/make-umd-bundle-dev-browser.js",
     "copy_html_dev_browser": "node tools/copy-html-files.js browser",
     "build_scss_dev_browser": "node tools/build-scss.js browser",
-    "serve_dev_browser": " browser-sync start --config bs-config.js",
+    "serve_dev_browser": "browser-sync start --config bs-config.js",
     "clean_dev_browser": "shx rm -rf ./dist/browser",
 
     "dev_nodejs": "npm-run-all clean_dev_nodejs watch_dev_nodejs",
