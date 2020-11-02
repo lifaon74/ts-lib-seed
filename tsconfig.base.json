@@ -22,6 +22,8 @@
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "noUnusedLocals": false,
     "suppressImplicitAnyIndexErrors": true,
     "moduleResolution": "node",
     "stripInternal": false,
