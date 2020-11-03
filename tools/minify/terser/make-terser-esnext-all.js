@@ -1,7 +1,10 @@
 const makeTerser = require('./make-terser');
 
-makeTerser('dist/global/{{lib-name}}.esnext.umd.js', {
+makeTerser('dist/global/traits.esnext.umd.js', {
   compress: {
     inline: false
   },
+  format: {
+    comments: false,
+  }
 });
