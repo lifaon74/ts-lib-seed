@@ -1,9 +1,9 @@
 const $terser = require('terser');
-const $fs = require('fs');
+const $fs = require('fs').promises;
 const $path = require('path');
 
 module.exports = async function makeTerser(sourcePath, _options = {}) {
-  const source = $fs.readFileSync(sourcePath, 'utf8');
+  const source = await $fs.readFile(sourcePath, 'utf8');
 
   const dest = sourcePath.replace(/.js$/, '.min.js');
   const sourceMapDest = dest + '.map';
