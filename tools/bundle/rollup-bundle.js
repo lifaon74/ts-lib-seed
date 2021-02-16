@@ -9,7 +9,7 @@ const $path = require('path');
 
 function mapValues(input, mapper) {
   return Object.entries(input)
-    .reduce( (result, [key, value]) => {
+    .reduce((result, [key, value]) => {
       result[key] = mapper(value, key, result);
       return result;
     }, {});
@@ -17,7 +17,7 @@ function mapValues(input, mapper) {
 
 function getImportMeta(url) {
   return `((function() {
-    var meta = { url: ${url} };
+    var meta = { url: ${ url } };
     try {
       return Object.assign({}, eval('import.meta'), meta);
     } catch (e) {
@@ -30,13 +30,16 @@ function getImportMeta(url) {
 module.exports = function rollupBundle(options) {
   const dest = options.dest;
   const sourcemapFullFile = dest + '.map';
-
+  const module = Array.isArray(options.module)
+    ? options.module
+    : [];
+  // console.log([...module, 'jsnext:main', 'browser', 'module', 'main']);
   rollup.rollup({
     input: options.input,
     plugins: [
       rollupAlias(options.aliases),
       rollupNodeResolve({
-        mainFields: ['jsnext:main', 'browser', 'module', 'main'],
+        mainFields: [...module, 'jsnext:main', 'browser', 'module', 'main'],
       }),
       rollupInject({
         exclude: 'node_modules/**',
@@ -55,7 +58,7 @@ module.exports = function rollupBundle(options) {
           // console.log('relativePath', relativePath, relativePath.replace('\\', '/'));
 
           const path = relativePath.replace('\\', '/');
-          const url = `new URL(${JSON.stringify(path)}, window.origin).href`;
+          const url = `new URL(${ JSON.stringify(path) }, window.origin).href`;
           if (prop === 'url') {
             return url;
           }

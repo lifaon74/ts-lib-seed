@@ -1,6 +1,6 @@
 const makeTerser = require('./make-terser');
 
-makeTerser('dist/global/traits.core.umd.js', {
+makeTerser('dist/global/{{lib-name}}.core.umd.js', {
   format: {
     comments: false,
   }
