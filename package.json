@@ -1,5 +1,5 @@
 {
-  "name": "{{lib-name}}",
+  "name": "{{package-name}}",
   "version": "1.0.0",
   "description": "Description",
   "repository": {

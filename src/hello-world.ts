@@ -1,7 +1,6 @@
 
 export function helloWorld() {
-  console.log('Hello world');
-  // INFO: import.meta is supported when bundling
+  // INFO: import.meta should be supported when bundling
   // @ts-ignore
-  console.log(import.meta.url);
+  console.log('Hello world', import.meta.url);
 }

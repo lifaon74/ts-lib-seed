@@ -4,6 +4,7 @@ const $fs = require('fs').promises;
 const $path = require('path');
 
 const config = require(`./config`);
+// const config = require(`./config.private`);
 
 const ROOT = $path.join($path.normalize(__dirname), '..');
 const DEST = $path.join(ROOT, '..', config.libName);
@@ -27,10 +28,11 @@ function replaceTagsInContent(buffer) {
 }
 
 function replaceTagsInFile(path) {
-  console.log('read', path);
   return $fs.readFile(path)
     .then((buffer) => {
       const dest = $path.join(DEST, $path.relative(ROOT, path));
+      console.log('read', path);
+      console.log('write', dest);
       return $fs.mkdir($path.dirname(dest), { recursive: true })
         .then(() => {
           return $fs.writeFile(dest, replaceTagsInContent(buffer));
@@ -47,7 +49,9 @@ function searchAndReplaceTags(path) {
           if (entry.isFile()) {
             return replaceTagsInFile(entryPath);
           } else if (entry.isDirectory()) {
-            return searchAndReplaceTags(entryPath);
+            if (!['.git', '.idea', 'node_module'].includes(entry.name)) {
+              return searchAndReplaceTags(entryPath);
+            }
           } else {
             console.log(`Unexpected type '${ entryPath }'`);
           }

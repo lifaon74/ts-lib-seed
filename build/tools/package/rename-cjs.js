@@ -6,15 +6,18 @@ const ROOT_PATH = $path.join(__dirname, '../../../');
 const DIST_PATH = $path.join(ROOT_PATH, 'dist');
 const DIST_CJS_PATH = $path.join(DIST_PATH, 'cjs');
 
+async function renameCJSFile(jsFilePath) {
+  const newPath = `${ jsFilePath.slice(0, -3) }.cjs`;
+  await $fs.rename(jsFilePath, newPath);
+}
 
 function renameCJS() {
   return $fsh.createDirectory(DIST_CJS_PATH)
     .then(() => {
-      return $fsh.exploreDirectory(DIST_CJS_PATH, (sourcePath, entry) => {
+      return $fsh.exploreDirectory(DIST_CJS_PATH, (entryPath, entry) => {
         if (entry.isFile()) {
-          if (sourcePath.endsWith('.js')) {
-            const newPath = `${ sourcePath.slice(0, -3) }.cjs`;
-            return $fs.rename(sourcePath, newPath);
+          if (entryPath.endsWith('.js')) {
+            return renameCJSFile(entryPath);
           }
         }
       });
