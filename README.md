@@ -7,14 +7,28 @@
 
 ## {{lib-name}} ##
 
-This library supports:
-
-- **node**: module with mjs files **OR** common-js, es5 (for older nodejs versions)
-- **browser**: module (with node resolution), esnext.
-  
-  You'll need to resolve import thought a bundler like [snowpack](https://www.snowpack.dev/), rollup, webpack, etc...
-  or directly using [skypack](https://www.skypack.dev/): [https://cdn.skypack.dev/{{package-name}}](https://cdn.skypack.dev/{{package-name}})
-  
 
 [SOME EXAMPLES HERE](examples/README.md)
 
+
+## 📦 Installation
+
+```bash
+yarn add {{package-name}}
+# or
+npm install {{package-name}} --save
+```
+
+This library supports:
+
+- **common-js** (require): transpiled as es5, with .cjs extension, useful for old nodejs versions
+- **module** (esm import): transpiled as esnext, with .mjs extension (requires node resolution for external packages)
+
+In a **node** environment the library works immediately (no extra tooling required),
+however, in a **browser** environment, you'll need to resolve external imports thought a bundler like
+[snowpack](https://www.snowpack.dev/),
+[rollup](https://rollupjs.org/guide/en/),
+[webpack](https://webpack.js.org/),
+etc...
+or directly using [skypack](https://www.skypack.dev/):
+[https://cdn.skypack.dev/{{package-name}}](https://cdn.skypack.dev/{{package-name}})
