@@ -49,7 +49,7 @@ function searchAndReplaceTags(path) {
           if (entry.isFile()) {
             return replaceTagsInFile(entryPath);
           } else if (entry.isDirectory()) {
-            if (!['.git', '.idea', 'node_module'].includes(entry.name)) {
+            if (!['.git', '.idea', 'node_module', 'dist'].includes(entry.name)) {
               return searchAndReplaceTags(entryPath);
             }
           } else {
