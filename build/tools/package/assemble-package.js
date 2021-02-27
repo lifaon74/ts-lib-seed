@@ -30,6 +30,7 @@ function generateNPMIgnore() {
     `.npmrc`,
     `.yarn.lock`,
     `package-lock.json`,
+    `.cache`,
   ].join('\n'));
 }
 
