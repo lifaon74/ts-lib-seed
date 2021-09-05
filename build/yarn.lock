@@ -2,20 +2,20 @@
 # yarn lockfile v1
 
 
-"@types/node@^15.0.2":
-  version "15.0.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.0.2.tgz#51e9c0920d1b45936ea04341aa3e2e58d339fb67"
-  integrity sha512-p68+a+KoxpoB47015IeYZYRrdqMUcpbK8re/zpFB8Ld46LHC1lPEbp3EXgkEhAYEcPvjJF6ZO+869SQ0aH1dcA==
+"@types/node@^16.7.6":
+  version "16.7.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.7.6.tgz#8666478db8095aa66e25b7e469f3e7b53ea2855e"
+  integrity sha512-VESVNFoa/ahYA62xnLBjo5ur6gPsgEE5cNRy8SrdnkZ2nwJSW0kJ4ufbFr2zuU9ALtHM8juY53VcRoTA7htXSg==
 
-acorn-walk@^8.1.0:
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/acorn-walk/-/acorn-walk-8.1.0.tgz#d3c6a9faf00987a5e2b9bdb506c2aa76cd707f83"
-  integrity sha512-mjmzmv12YIG/G8JQdQuz2MUDShEJ6teYpT5bmWA4q7iwoGen8xtt3twF3OvzIUl+Q06aWIjvnwQUKvQ6TtMRjg==
+acorn-walk@^8.1.1:
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/acorn-walk/-/acorn-walk-8.1.1.tgz#3ddab7f84e4a7e2313f6c414c5b7dac85f4e3ebc"
+  integrity sha512-FbJdceMlPHEAWJOILDk1fXD8lnTlEIWFkqtfk+MvmL5q/qlHfN7GEHcsFZWt/Tea9jRNPWUZG4G976nqAAmU9w==
 
-acorn@^8.2.4:
-  version "8.2.4"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.2.4.tgz#caba24b08185c3b56e3168e97d15ed17f4d31fd0"
-  integrity sha512-Ibt84YwBDDA890eDiDCEqcbwvHlBvzzDkU2cGBBDDI1QWT12jTiXIOn2CIw5KK4i6N5Z2HUxwYjzriDyqaqqZg==
+acorn@^8.4.1:
+  version "8.4.1"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.4.1.tgz#56c36251fc7cabc7096adc18f05afe814321a28c"
+  integrity sha512-asabaBSkEKosYKMITunzX177CXxQ4Q8BSSzMTKD+FefUhipQC70gfW5SiUDhYQ3vk8G+81HqQk7Fv9OXwwn9KA==
 
 ansi-red@^0.1.1:
   version "0.1.1"
@@ -1044,10 +1044,10 @@ toml@^2.3.2:
   resolved "https://registry.yarnpkg.com/toml/-/toml-2.3.6.tgz#25b0866483a9722474895559088b436fd11f861b"
   integrity sha512-gVweAectJU3ebq//Ferr2JUY4WKSDe5N+z0FvjDncLGyHmIDoxgY/2Ie4qfEIDm4IS7OA6Rmdm7pdEEdMcV/xQ==
 
-tsc-watch@^4.2.9:
-  version "4.2.9"
-  resolved "https://registry.yarnpkg.com/tsc-watch/-/tsc-watch-4.2.9.tgz#d93fc74233ca4ef7ee6b12d08c0fe6aca3e19044"
-  integrity sha512-DlTaoDs74+KUpyWr7dCGhuscAUKCz6CiFduBN7R9RbLJSSN1moWdwoCLASE7+zLgGvV5AwXfYDiEMAsPGaO+Vw==
+tsc-watch@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/tsc-watch/-/tsc-watch-4.5.0.tgz#d6884b932822b2c2ccd37f1c1f3748304566a474"
+  integrity sha512-aXhN4jY+1YEcn/NwCQ/+fHqU43EqOpW+pS+933EPsVEsrKhvyrodPDIjQsk1a1niFrabAK3RIBrRbAslVefEbQ==
   dependencies:
     cross-spawn "^7.0.3"
     node-cleanup "^2.1.2"
@@ -1055,10 +1055,10 @@ tsc-watch@^4.2.9:
     string-argv "^0.1.1"
     strip-ansi "^6.0.0"
 
-tslib@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.2.0.tgz#fb2c475977e35e241311ede2693cee1ec6698f5c"
-  integrity sha512-gS9GVHRU+RGn5KQM2rllAlR3dU6m7AcpJKdtH8gFvQiC4Otgk98XnmMU+nZenHt/+VhnBPWwgrJsyrdcw6i23w==
+tslib@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
+  integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
 
 type-check@~0.3.2:
   version "0.3.2"
@@ -1072,10 +1072,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@4.2.4:
-  version "4.2.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.2.4.tgz#8610b59747de028fda898a8aef0e103f156d0961"
-  integrity sha512-V+evlYHZnQkaz8TRBuxTA92yZBPotr5H+WhQ7bD3hZUndx5tGOa1fuCgeSjxAzM1RiN5IzvadIXTVefuuwZCRg==
+typescript@4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.2.tgz#6d618640d430e3569a1dfb44f7d7e600ced3ee86"
+  integrity sha512-gzP+t5W4hdy4c+68bfcv0t400HVJMMd2+H9B7gae1nQlBzCqvrXX+6GL/b3GAgyTH966pzrZ70/fRjwAtZksSQ==
 
 util-deprecate@~1.0.1:
   version "1.0.2"

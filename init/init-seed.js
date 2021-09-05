@@ -3,11 +3,13 @@
 const $fs = require('fs').promises;
 const $path = require('path');
 
-const config = require(`./config`);
-// const config = require(`./config.private`);
+// const config = require(`./config`);
+const config = require(`./config.private`);
 
 const ROOT = $path.join($path.normalize(__dirname), '..');
 const DEST = $path.join(ROOT, '..', config.libName);
+
+const EXCLUDED_DIRECTORIES = ['.git', '.idea', 'node_modules', 'dist', 'init'];
 
 
 const tags = Object.entries({
@@ -27,30 +29,32 @@ function replaceTagsInContent(buffer) {
   }, buffer.toString());
 }
 
-function replaceTagsInFile(path) {
+function replaceTagsInFile(path, { dry = false } = {}) {
   return $fs.readFile(path)
     .then((buffer) => {
       const dest = $path.join(DEST, $path.relative(ROOT, path));
       console.log('read', path);
       console.log('write', dest);
-      return $fs.mkdir($path.dirname(dest), { recursive: true })
-        .then(() => {
-          return $fs.writeFile(dest, replaceTagsInContent(buffer));
-        });
+      if (!dry) {
+        return $fs.mkdir($path.dirname(dest), { recursive: true })
+          .then(() => {
+            return $fs.writeFile(dest, replaceTagsInContent(buffer));
+          });
+      }
     });
 }
 
-function searchAndReplaceTags(path) {
+function searchAndReplaceTags(path, options) {
   return $fs.readdir(path, { withFileTypes: true })
     .then((entries) => {
       return Promise.all(
         entries.map((entry) => {
           const entryPath = $path.join(path, entry.name);
           if (entry.isFile()) {
-            return replaceTagsInFile(entryPath);
+            return replaceTagsInFile(entryPath, options);
           } else if (entry.isDirectory()) {
-            if (!['.git', '.idea', 'node_modules', 'dist'].includes(entry.name)) {
-              return searchAndReplaceTags(entryPath);
+            if (!EXCLUDED_DIRECTORIES.includes(entry.name)) {
+              return searchAndReplaceTags(entryPath, options);
             }
           } else {
             console.log(`Unexpected type '${ entryPath }'`);
@@ -61,16 +65,20 @@ function searchAndReplaceTags(path) {
     });
 }
 
-function make() {
+function make(options) {
   return $fs.stat(DEST)
     .then(() => {
       throw new Error(`Destination '${DEST}' already exists`);
     }, () => {
-      return searchAndReplaceTags(ROOT);
+      return searchAndReplaceTags(ROOT, options);
     });
 }
 
-make()
+const options = {
+  dry: process.argv.includes('--dry'),
+};
+
+make(options)
   .catch((error) => {
     console.error(error);
   });
