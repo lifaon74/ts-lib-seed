@@ -3,8 +3,8 @@
 const $fs = require('fs').promises;
 const $path = require('path');
 
-// const config = require(`./config`);
-const config = require(`./config.private`);
+const config = require(`./config`);
+// const config = require(`./config.private`);
 
 const ROOT = $path.join($path.normalize(__dirname), '..');
 const DEST = $path.join(ROOT, '..', config.libName);
