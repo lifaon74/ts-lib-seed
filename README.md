@@ -23,7 +23,7 @@ This library supports:
 - **module** (esm import): transpiled as esnext, with .mjs extension (requires node resolution for external packages)
 
 In a **node** environment the library works immediately (no extra tooling required),
-however, in a **browser** environment, you'll need to resolve external imports thought a bundler like
+however, in a **browser** environment, you'll probably need to resolve external imports thought a bundler like
 [snowpack](https://www.snowpack.dev/),
 [rollup](https://rollupjs.org/guide/en/),
 [webpack](https://webpack.js.org/),

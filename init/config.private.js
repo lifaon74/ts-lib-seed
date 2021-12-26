@@ -1,8 +1,8 @@
 // my personal config
 module.exports = {
-  githubPage: 'lifaon74/rx-dom-aot-plugin',
-  packageName: '@lifaon/rx-dom-aot-plugin',
-  libName: 'rx-dom-aot-plugin',
+  githubPage: 'lifaon74/path',
+  packageName: '@lifaon/path',
+  libName: 'path',
   author: 'Valentin Richard',
 };
 
