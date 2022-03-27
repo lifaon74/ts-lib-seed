@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@types/node@^17.0.15":
-  version "17.0.15"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.15.tgz#97779282c09c09577120a2162e71d8380003590a"
-  integrity sha512-zWt4SDDv1S9WRBNxLFxFRHxdD9tvH8f5/kg5/IaLFdnSNXsDY4eL3Q3XXN+VxUnWIhyVFDwcsmAprvwXoM/ClA==
+"@types/node@^17.0.21":
+  version "17.0.21"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.21.tgz#864b987c0c68d07b4345845c3e63b75edd143644"
+  integrity sha512-DBZCJbhII3r90XbQxI8Y9IjjiiOGlZ0Hr32omXIZvwwZ7p4DMMXGrKXVyPfuoBOri9XNtL0UK69jYIBIsRX3QQ==
 
 acorn-walk@^8.2.0:
   version "8.2.0"
@@ -992,10 +992,10 @@ toml@^2.3.2:
   resolved "https://registry.yarnpkg.com/toml/-/toml-2.3.6.tgz#25b0866483a9722474895559088b436fd11f861b"
   integrity sha512-gVweAectJU3ebq//Ferr2JUY4WKSDe5N+z0FvjDncLGyHmIDoxgY/2Ie4qfEIDm4IS7OA6Rmdm7pdEEdMcV/xQ==
 
-tsc-watch@^4.6.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/tsc-watch/-/tsc-watch-4.6.0.tgz#a0eba1300cbe3048ab6d3a3e06de47141b613beb"
-  integrity sha512-DRMADjFe44EDWb+YMIOj4b83UrU6le27L3/o0/9FlmA01ikFd5Dl9RD5h1hpeh0mQdIqXvwfHZszCcjhH3bAmQ==
+tsc-watch@^4.6.2:
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/tsc-watch/-/tsc-watch-4.6.2.tgz#4267ee6acddb608356573ba96024fa250eb22cac"
+  integrity sha512-eHWzZGkPmzXVGQKbqQgf3BFpGiZZw1jQ29ZOJeaSe8JfyUvphbd221NfXmmsJUGGPGA/nnaSS01tXipUcyxAxg==
   dependencies:
     cross-spawn "^7.0.3"
     node-cleanup "^2.1.2"
@@ -1013,10 +1013,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@4.5.5:
-  version "4.5.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.5.5.tgz#d8c953832d28924a9e3d37c73d729c846c5896f3"
-  integrity sha512-TCTIul70LyWe6IJWT8QSYeA54WQe8EjQFU4wY52Fasj5UKx88LNYKCgBEHcOMOrFF1rKGbD8v/xcNWVUq9SymA==
+typescript@4.6.2:
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.6.2.tgz#fe12d2727b708f4eef40f51598b3398baa9611d4"
+  integrity sha512-HM/hFigTBHZhLXshn9sN37H085+hQGeJHJ/X7LpBWLID/fbc2acUMfU+lGD98X81sKP+pFa9f0DZmCwB9GnbAg==
 
 util-deprecate@~1.0.1:
   version "1.0.2"

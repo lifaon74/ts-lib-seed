@@ -42,7 +42,9 @@ function generateIndexFiles({ dry = true }) {
   return explore(SRC_PATH);
 }
 
-generateIndexFiles()
+const dry = process.argv.includes('--dry');
+
+generateIndexFiles({ dry })
   .catch((error) => {
     console.error(error);
   });
