@@ -1,6 +1,6 @@
 const $util = require('util');
 const $path = require('path');
-const $fs = require('fs').promises;
+const $fs = require('fs/promises');
 const $fsh = require('../../misc/fs-helpers.js');
 const $acorn = require('acorn');
 const $acornWalk = require('acorn-walk');

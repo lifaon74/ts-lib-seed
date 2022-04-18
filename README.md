@@ -3,7 +3,7 @@
 ![NPM](https://img.shields.io/npm/l/{{package-name}}.svg)
 ![npm type definitions](https://img.shields.io/npm/types/{{package-name}}.svg)
 
-## {{lib-name}} ##
+## {{lib-name}}
 
 
 [SOME EXAMPLES HERE](examples/README.md)
