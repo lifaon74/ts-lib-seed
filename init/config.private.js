@@ -1,8 +1,8 @@
 // my personal config
 module.exports = {
-  githubPage: 'lifaon74/rx-router',
-  packageName: '@lifaon/rx-router',
-  libName: 'rx-router',
+  githubPage: 'uni-fs/core',
+  packageName: '@uni-fs/core',
+  libName: 'uni-fs/core',
   author: 'Valentin Richard',
 };
 

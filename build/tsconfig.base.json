@@ -27,7 +27,7 @@
     "suppressImplicitAnyIndexErrors": true,
     "moduleResolution": "node",
     "stripInternal": false,
-    "target": "es5",
+    "target": "esnext",
     "outDir": "../dist",
     "lib": [
       "ESNext",

@@ -1,15 +1,14 @@
-
-
 const $fs = require('fs').promises;
 const $path = require('path');
 
-const config = require(`./config`);
-// const config = require(`./config.private`);
+// const config = require(`./config`);
+const config = require(`./config.private`);
 
 const ROOT = $path.join($path.normalize(__dirname), '..');
 const DEST = $path.join(ROOT, '..', config.libName);
 
 const EXCLUDED_DIRECTORIES = ['.git', '.idea', 'node_modules', 'dist', 'init'];
+const EXCLUDED_REPLACE_TAGS_PATH = ['.yarn'];
 
 
 const tags = Object.entries({
@@ -30,18 +29,27 @@ function replaceTagsInContent(buffer) {
 }
 
 function replaceTagsInFile(path, { dry = false } = {}) {
-  return $fs.readFile(path)
-    .then((buffer) => {
-      const dest = $path.join(DEST, $path.relative(ROOT, path));
-      console.log('read', path);
-      console.log('write', dest);
-      if (!dry) {
-        return $fs.mkdir($path.dirname(dest), { recursive: true })
-          .then(() => {
-            return $fs.writeFile(dest, replaceTagsInContent(buffer));
-          });
-      }
-    });
+  const dest = $path.join(DEST, $path.relative(ROOT, path));
+
+  console.log('read', path);
+  console.log('write', dest);
+
+  if (dry) {
+    return Promise.resolve();
+  } else {
+    return $fs.mkdir($path.dirname(dest), { recursive: true })
+      .then(() => {
+        if (EXCLUDED_REPLACE_TAGS_PATH.some(_ => path.includes(_))) {
+          return $fs.copyFile(path, dest);
+        } else {
+          return $fs.readFile(path)
+            .then((buffer) => {
+              return $fs.writeFile(dest, replaceTagsInContent(buffer));
+            });
+        }
+      });
+
+  }
 }
 
 function searchAndReplaceTags(path, options) {
@@ -59,7 +67,7 @@ function searchAndReplaceTags(path, options) {
           } else {
             console.log(`Unexpected type '${ entryPath }'`);
           }
-        })
+        }),
       );
 
     });
@@ -68,7 +76,7 @@ function searchAndReplaceTags(path, options) {
 function make(options) {
   return $fs.stat(DEST)
     .then(() => {
-      throw new Error(`Destination '${DEST}' already exists`);
+      throw new Error(`Destination '${ DEST }' already exists`);
     }, () => {
       return searchAndReplaceTags(ROOT, options);
     });

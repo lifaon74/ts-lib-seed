@@ -19,7 +19,7 @@ npm install {{package-name}} --save
 
 This library supports:
 
-- **common-js** (require): transpiled as es5, with .cjs extension, useful for old nodejs versions
+- **common-js** (require): transpiled as es2015, with .cjs extension, useful for old nodejs versions
 - **module** (esm import): transpiled as esnext, with .mjs extension (requires node resolution for external packages)
 
 In a **node** environment the library works immediately (no extra tooling required),
