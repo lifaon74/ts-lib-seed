@@ -2,7 +2,7 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "module": "esnext",
-    "importHelpers": false,
+    "importHelpers": true,
     "declaration": true,
     "moduleResolution": "node",
     "removeComments": false,

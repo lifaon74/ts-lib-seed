@@ -84,7 +84,6 @@ function generateIndexFiles(
 const dry = process.argv.includes('--dry');
 const override = process.argv.includes('--override');
 
-console.log('ok');
 generateIndexFiles({ dry, override })
   .catch((error) => {
     console.error(error);

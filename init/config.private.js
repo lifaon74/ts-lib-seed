@@ -1,8 +1,8 @@
 // my personal config
 module.exports = {
-  githubPage: 'uni-fs/core',
-  packageName: '@uni-fs/core',
-  libName: 'uni-fs/core',
+  githubPage: 'lirx-js/dom-material',
+  packageName: '@lirx/dom-material',
+  libName: 'lirx/dom-material',
   author: 'Valentin Richard',
 };
 
