@@ -1,8 +1,8 @@
 // my personal config
 module.exports = {
-  githubPage: 'lirx-js/dom-material',
-  packageName: '@lirx/dom-material',
-  libName: 'lirx/dom-material',
+  githubPage: 'lirx-js/animations',
+  packageName: '@lirx/animations',
+  libName: 'lirx/animations',
   author: 'Valentin Richard',
 };
 

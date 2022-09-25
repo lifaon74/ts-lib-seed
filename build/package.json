@@ -1,6 +1,6 @@
 {
   "name": "ts-lib-seed",
-  "version": "1.2.7",
+  "version": "1.2.9",
   "description": "Seed to build a library",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,9 @@
     "dev": "yarn run dev:package",
     "": "",
     "_________________BUILD_________________": "",
-    "build:package": "echo 'build:package' && yarn run clean:dist && yarn run build:package:tcs && yarn run assemble:package",
+    "build:package": "echo 'build:package' && yarn run clean:dist && yarn run build:package:tcs && yarn run build:package:scss && yarn run assemble:package",
     "build:package:tcs": "echo 'build:package:tcs' && yarn run build:package:tcs:module:mjs && yarn run build:package:tcs:cjs:cjs",
+    "build:package:scss": "echo 'build:package:scss' && yarn run copy:scss-files",
     "assemble:package": "echo 'assemble:package' && node tools/package/assemble-package.js",
     "______MJS_____": "",
     "build:package:tcs:module:mjs": "echo 'build:package:tcs:module:mjs' && yarn run build:package:tcs:module && yarn run build:package:rename:mjs && yarn run build:package:resolve:mjs",
@@ -32,6 +33,8 @@
     "dev:package:tcs:cjs:windows": "echo 'dev:package:tcs:cjs:windows' && tsc-watch -p tsconfig/tsconfig.build.package.cjs.json --onSuccess \\\"yarn run dev:package:tcs:cjs:onsuccess\\\"",
     "dev:package:tcs:cjs:linux": "echo 'dev:package:tcs:cjs:linux' && tsc-watch -p tsconfig/tsconfig.build.package.cjs.json --onSuccess 'yarn run dev:package:tcs:cjs:onsuccess'",
     "dev:package:tcs:cjs:onsuccess": "echo 'dev:package:tcs:cjs:onsuccess' && yarn run build:package:rename:cjs",
+    "_____SCSS_____": "",
+    "copy:scss-files": "echo 'copy:scss-files' && node tools/copy/copy-scss-files.js",
     "_________________INDEX_FILES_________________": "",
     "comment:index-files": "node tools/index/comment-index-files.js",
     "uncomment:index-files": "node tools/index/comment-index-files.js --uncomment",
@@ -40,7 +43,7 @@
     "publish:package": "cd ../dist && yarn publish --access public",
     "link:package": "cd ../dist && yarn link",
     "_________________OTHERS_________________": "",
-    "clean:dist": "echo 'clean:dist' && shx rm -rf ./dist",
+    "clean:dist": "echo 'clean:dist' && find ../ -path '../dist/*' -delete",
     "generate:toc": "markdown-toc ../README.md",
     "comment:build:package": "yarn run uncomment:index-files && yarn run build:package && yarn run comment:index-files",
     "ncu": "npx npm-check-updates"
@@ -61,7 +64,6 @@
     "html-minifier": "^4.0.0",
     "postcss": "^8.4.16",
     "sass": "^1.54.9",
-    "shx": "^0.3.4",
     "tsc-watch": "^5.0.3",
     "tslib": "^2.4.0",
     "typescript": "^4.8.3"
