@@ -6,9 +6,6 @@
 ## {{lib-name}}
 
 
-[SOME EXAMPLES HERE](examples/README.md)
-
-
 ## 📦 Installation
 
 ```bash
