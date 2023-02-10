@@ -557,7 +557,7 @@ function saveCache(
       : Promise.resolve(new Map())
   )
     .then((cache) => {
-      // return $fs.writeFile(path, JSON.stringify(Array.from(cache.entries()), null, 2), 'utf8');
+      return $fs.writeFile(path, JSON.stringify(Array.from(cache.entries()), null, 2), 'utf8');
     });
 }
 
