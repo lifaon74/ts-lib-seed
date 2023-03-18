@@ -1,6 +1,6 @@
 {
   "name": "ts-lib-seed",
-  "version": "1.2.15",
+  "version": "1.2.19",
   "description": "Seed to build a library",
   "main": "index.js",
   "scripts": {
@@ -42,12 +42,12 @@
     "comment:index-files": "node tools/index/comment-index-files.js",
     "uncomment:index-files": "node tools/index/comment-index-files.js --uncomment",
     "generate:index-files": "node tools/index/generate-index-files.js",
+    "remove:index-files": "echo 'remove:index-files' && find ../ -path '../src/**/index.ts' -delete",
     "_________________MANAGE_PACKAGE_______________": "",
     "publish:package": "cd ../dist && yarn publish --access public",
     "link:package": "cd ../dist && yarn link",
     "_________________OTHERS_________________": "",
     "clean:dist": "echo 'clean:dist' && find ../ -path '../dist/*' -delete",
-    "generate:toc": "markdown-toc ../README.md",
     "comment:build:package": "yarn run uncomment:index-files && yarn run build:package && yarn run comment:index-files",
     "ncu": "npx npm-check-updates"
   },
@@ -63,10 +63,10 @@
     "acorn": "^8.8.2",
     "acorn-walk": "^8.2.0",
     "astring": "^1.8.4",
-    "cssnano": "^5.1.14",
+    "cssnano": "^5.1.15",
     "html-minifier-terser": "^7.1.0",
     "postcss": "^8.4.21",
-    "sass": "^1.58.0",
+    "sass": "^1.59.3",
     "tsc-watch": "^6.0.0",
     "tslib": "^2.5.0",
     "typescript": "^4.9.5"
