@@ -7,9 +7,15 @@
     "type": "git",
     "url": "https://github.com/{{github-page}}"
   },
+  "sripts": {
+    "reinstall": "rm -rf ./node_modules && rm -f ./yarn.lock && yarn install"
+  },
   "keywords": [],
   "author": "{{author}}",
   "license": "MIT",
   "access": "public",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^29.5.1"
+  }
 }

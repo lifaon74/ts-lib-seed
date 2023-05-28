@@ -10,11 +10,10 @@ The library requires `nodejs 19+`, `yarn` and optionally `verdaccio` (if not req
 
 So the first commands to run are:
 
-If you have `nvm` (skip it if you're already using nodejs 19+):
-
 ```shell
 nvm use
 ```
+*If you don't have nvm, please use manually nodejs 19+.*
 
 Then:
 
@@ -31,6 +30,10 @@ This is where you'll find the core components, functions, classes and types of t
 
 This library contains a specific folder called `build`.
 It contains all the scripts to build the library, develop it, and some common operations.
+
+```shell
+cd build
+```
 
 It uses `yarn 2` with plug-and-play. So you can immediately start developing using `npm` or `yarn`.
 `nodejs 19+` is required (previous versions may work but have not been tested).
