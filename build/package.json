@@ -1,6 +1,6 @@
 {
   "name": "ts-lib-seed",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Seed to build a library",
   "main": "index.js",
   "scripts": {

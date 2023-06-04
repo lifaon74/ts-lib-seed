@@ -1,8 +1,8 @@
 // my personal config
 export default {
-  githubPage: 'lifaon74/md5',
-  packageName: '@lifaon/md5',
-  libName: 'md5',
+  githubPage: 'thingmate/vendor-tasmota',
+  packageName: '@thingmate/vendor-tasmota',
+  libName: 'thingmate/vendor-tasmota',
   author: 'Valentin Richard',
 };
 
