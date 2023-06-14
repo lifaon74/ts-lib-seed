@@ -16,6 +16,6 @@
   "access": "public",
   "dependencies": {},
   "devDependencies": {
-    "@types/jest": "^29.5.1"
+    "@types/jest": "^29.5.2"
   }
 }
