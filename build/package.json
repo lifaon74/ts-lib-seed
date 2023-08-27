@@ -1,6 +1,6 @@
 {
   "name": "ts-lib-seed",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "Seed to build a library",
   "main": "index.js",
   "scripts": {
@@ -50,7 +50,7 @@
     "bump:publish:package:dev": "yarn run bump:package:version && yarn run publish:package:dev",
     "bump:package:version": "echo 'bump:package:version' && node tools/package/bump-package-version.mjs",
     "publish:package:dev": "cd ../dist && npm publish --registry http://localhost:4873/",
-    "publish:package:prod": "cd ../dist && npm publish --access public",
+    "publish:package:prod": "cd ../dist && npm publish --access public --registry https://registry.npmjs.org",
     "install:verdaccio": "npm install --global verdaccio",
     "run:verdaccio": "verdaccio",
     "_________________OTHERS_________________": "",
