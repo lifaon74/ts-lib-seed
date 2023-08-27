@@ -1,8 +1,8 @@
 // my personal config
 export default {
-  githubPage: 'thingmate/vendor-tasmota',
-  packageName: '@thingmate/vendor-tasmota',
-  libName: 'thingmate/vendor-tasmota',
+  githubPage: 'lirx-js/unsubscribe',
+  packageName: '@lirx/unsubscribe',
+  libName: 'lirx/unsubscribe',
   author: 'Valentin Richard',
 };
 

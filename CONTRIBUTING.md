@@ -13,6 +13,7 @@ So the first commands to run are:
 ```shell
 nvm use
 ```
+
 *If you don't have nvm, please use manually nodejs 19+.*
 
 Then:
@@ -33,10 +34,8 @@ It contains all the scripts to build the library, develop it, and some common op
 
 ```shell
 cd build
+yarn install
 ```
-
-It uses `yarn 2` with plug-and-play. So you can immediately start developing using `npm` or `yarn`.
-`nodejs 19+` is required (previous versions may work but have not been tested).
 
 To build the lib: `yarn run build`. It will create an `esm` and a `cjs` version of the library with type definitions.
 The resulting build is compatible with modern and old bundlers, and is located in the `dist` directory.
@@ -60,7 +59,7 @@ verdaccio
 Then to build and publish the lib to `verdaccio`:
 
 ```shell
-yarn run build:dev
+yarn build:dev
 ```
 
 The `build` folder must be kept untouched, but you can submit changes [here](https://github.com/lifaon74/ts-lib-seed).
