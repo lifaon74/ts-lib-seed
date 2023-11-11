@@ -6,7 +6,7 @@ This projet is open to everyone. Feel free to test the library, share it, improv
 
 #### Root
 
-The library requires `nodejs 19+`, `yarn` and optionally `verdaccio` (if not required, you may comment the `.yarnrc` file. See later the explanation).
+The library requires `nodejs ^20.9.0`, `yarn` and optionally `verdaccio` (if not required, you may comment the `.yarnrc` file. See later the explanation).
 
 So the first commands to run are:
 
