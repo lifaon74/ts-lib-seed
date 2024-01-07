@@ -7,15 +7,13 @@
     "type": "git",
     "url": "https://github.com/{{github-page}}"
   },
-  "scripts": {
-    "reinstall": "rm -rf ./node_modules && rm -f ./yarn.lock && yarn install"
-  },
   "keywords": [],
   "author": "{{author}}",
   "license": "MIT",
   "access": "public",
-  "dependencies": {},
   "devDependencies": {
-    "@types/jest": "^29.5.7"
-  }
+    "@types/jest": "^29.5.11"
+  },
+  "localDependencies": [],
+  "packageManager": "yarn@4.0.2"
 }
