@@ -12,8 +12,8 @@
   "license": "MIT",
   "access": "public",
   "devDependencies": {
-    "@types/jest": "^29.5.11"
+    "@types/jest": "^29.5.12"
   },
   "localDependencies": [],
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.3.1"
 }

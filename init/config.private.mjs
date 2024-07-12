@@ -7,11 +7,18 @@
 // };
 
 export default {
-  githubPage: 'lirx-js/async-store',
-  packageName: '@lirx/async-store',
-  libName: 'lirx/async-store',
+  githubPage: 'lifaon74/deep-map',
+  packageName: '@lifaon/deep-map',
+  libName: 'deep-map',
   author: 'Valentin Richard',
 };
+
+// export default {
+//   githubPage: 'lirx-js/async-store',
+//   packageName: '@lirx/async-store',
+//   libName: 'lirx/async-store',
+//   author: 'Valentin Richard',
+// };
 
 // export default {
 //   githubPage: 'uni-fs/local-node-js',
